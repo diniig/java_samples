@@ -11,5 +11,9 @@ public class ControllerOne {
     public ResponseEntity<String> methodOne(){
         return ResponseEntity.ok("Hello world");
     }
-    
+
+    @RequestMapping(path = "/one-two")
+    public String methodTwo(){
+        return "Hello world"; // does not work. because @Controller
+    }
 }
