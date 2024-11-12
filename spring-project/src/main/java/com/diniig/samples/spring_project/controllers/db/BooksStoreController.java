@@ -2,7 +2,6 @@ package com.diniig.samples.spring_project.controllers.db;
 
 import com.diniig.samples.spring_project.entities.Author;
 import com.diniig.samples.spring_project.entities.Book;
-import com.diniig.samples.spring_project.entities.Customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -42,7 +41,7 @@ public class BooksStoreController {
         }
 
         author.ifPresent(t -> {
-            List<Book> books = t.getBooks();
+            List<Book> books = t.getBooks(); //LazyInitializationException
             log.info("books {}", books);
         });
         

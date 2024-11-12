@@ -1,7 +1,6 @@
 package com.diniig.samples.spring_project.controllers.db;
 
 import com.diniig.samples.spring_project.entities.Customer;
-import com.diniig.samples.spring_project.repositories.CustomerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
