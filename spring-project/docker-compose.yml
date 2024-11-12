@@ -1,0 +1,13 @@
+services:
+  postgres:
+    container_name: spring_project_pg
+    # image: "postgres:11"
+    image: "postgres:12.0.0"
+    command: postgres -c max_connections=90 -c log_connections=on -c log_disconnections=on -c log_hostname=on
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      # DATABASE NAME - postgres
+    ports:
+      - "5433:5432"
+    restart: unless-stopped

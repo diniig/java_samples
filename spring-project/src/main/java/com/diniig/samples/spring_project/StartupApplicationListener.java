@@ -22,9 +22,8 @@ public class StartupApplicationListener {
         log.info("Increment counter");
         counter++;
 
-        RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> res = restTemplate.exchange(URI.create("https://google.com"), HttpMethod.GET, null,
-                String.class);
-        log.info("res {}", res);
+        // RestTemplate restTemplate = new RestTemplate();
+        // ResponseEntity<String> res = restTemplate.exchange(URI.create("https://google.com"), HttpMethod.GET, null, String.class);
+        // log.info("res {}", res);
     }
 }
