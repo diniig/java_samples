@@ -6,8 +6,11 @@ import com.diniig.samples.spring_project.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+
 
 @Controller
 @RequestMapping(path = "/api/v1")
@@ -17,6 +20,7 @@ public class DbController {
     private CustomerRepository customerRepository;
 
     @RequestMapping(method = RequestMethod.POST, path = "/customers")
+    // @Transactional
     public ResponseEntity<String> addNewCustormer() {
 
         customerRepository.save(new Customer(1, "name"));
