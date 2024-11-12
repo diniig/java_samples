@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(path = "/api/v1")
-public class DbController {
+public class CustomerController {
 
     @Autowired
     private CustomerRepository customerRepository;
