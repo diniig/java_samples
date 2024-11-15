@@ -1,8 +1,4 @@
-package com.diniig.samples;
-
-import com.diniig.samples.clonning.DeepCopySample;
-import com.diniig.samples.clonning.Name;
-import com.diniig.samples.clonning.ShallowCopySample;
+package com.diniig.samples.clonning;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +7,7 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class AppTest {
+public class ClonningTest {
 
     @Test
     public void shouldAnswerWithTrue() {
