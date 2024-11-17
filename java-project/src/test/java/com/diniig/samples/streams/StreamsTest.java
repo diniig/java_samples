@@ -1,4 +1,4 @@
-package com.diniig.samples.tricks;
+package com.diniig.samples.streams;
 
 import org.junit.jupiter.api.Test;
 
