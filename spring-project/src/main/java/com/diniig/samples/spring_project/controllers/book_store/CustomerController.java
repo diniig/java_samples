@@ -1,4 +1,4 @@
-package com.diniig.samples.spring_project.controllers.db;
+package com.diniig.samples.spring_project.controllers.book_store;
 
 import com.diniig.samples.spring_project.entities.Customer;
 import com.diniig.samples.spring_project.repositories.CustomerRepository;
