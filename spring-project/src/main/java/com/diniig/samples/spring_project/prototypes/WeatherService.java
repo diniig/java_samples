@@ -1,12 +1,12 @@
 package com.diniig.samples.spring_project.prototypes;
 
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalTime;
 import java.util.Random;
 
-@Service
+@Component
 @Scope(org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 // @Scope(org.springframework.web.context.WebApplicationContext.SCOPE_REQUEST)
 // @org.springframework.web.context.annotation.RequestScope

@@ -23,7 +23,7 @@ public class WeatherController {
        Thread.sleep(1000);
        result.add(touristService.getWeather());
        Thread.sleep(1000);
-       result.add(touristService.getWeather());
+       result.add(touristService.getWeather2());
 
        System.out.println(result);
 
