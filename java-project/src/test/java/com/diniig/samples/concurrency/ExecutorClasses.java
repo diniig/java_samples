@@ -18,25 +18,18 @@ public class ExecutorClasses {
     }
 
     private void future() {
-        // Создаем пул потоков
         ExecutorService executor = Executors.newFixedThreadPool(1);
-        // Создаем объект Callable
         Callable<Integer> callableTask = () -> {
             System.out.println("Выполняется в отдельном потоке");
-            // Какая-то вычислительная работа
             return 42;
         };
-        // Передаем Callable задачу в ExecutorService
         Future<Integer> future = executor.submit(callableTask);
         try {
-            // Делаем что-то другое в основном потоке
-            // Ждем завершения выполнения и получаем результат
             Integer result = future.get();
             System.out.println("Результат: " + result);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
-        // Завершаем ExecutorService
         executor.shutdown();
     }
 
@@ -68,7 +61,7 @@ public class ExecutorClasses {
             CompletableFuture<String> future = completableFuture.thenApply(s -> s + " World");
             future.get();
         }
-
+        
         {
             CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> "Hello")
                     .thenCompose(s -> CompletableFuture.supplyAsync(() -> s + " World"));
