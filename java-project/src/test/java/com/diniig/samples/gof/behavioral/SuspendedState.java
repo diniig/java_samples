@@ -1,4 +1,4 @@
-package com.diniig.samples.gof;
+package com.diniig.samples.gof.behavioral;
 
 public class SuspendedState implements State {
 

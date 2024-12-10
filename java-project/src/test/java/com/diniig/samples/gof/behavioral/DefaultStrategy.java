@@ -1,4 +1,4 @@
-package com.diniig.samples.gof;
+package com.diniig.samples.gof.behavioral;
 
 import lombok.extern.slf4j.Slf4j;
 

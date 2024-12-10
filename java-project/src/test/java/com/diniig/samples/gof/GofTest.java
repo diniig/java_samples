@@ -3,9 +3,18 @@ package com.diniig.samples.gof;
 import com.diniig.samples.gof.behavioral.AddExpression;
 import com.diniig.samples.gof.behavioral.JDBCDriver;
 import com.diniig.samples.gof.behavioral.JDBCDriverImpl;
+import com.diniig.samples.gof.behavioral.Library;
+import com.diniig.samples.gof.behavioral.MyObserverImpl;
+import com.diniig.samples.gof.behavioral.MyObserver;
 import com.diniig.samples.gof.behavioral.NoCapitalCharFilter;
 import com.diniig.samples.gof.behavioral.NumberExpression;
+import com.diniig.samples.gof.behavioral.ObjectWithState;
+import com.diniig.samples.gof.behavioral.ProcessorImpl;
+import com.diniig.samples.gof.behavioral.SuspendedState;
+import com.diniig.samples.gof.behavioral.State;
+import com.diniig.samples.gof.behavioral.TextEditor;
 import com.diniig.samples.gof.behavioral.TextFilter;
+import com.diniig.samples.gof.behavioral.TextStore;
 import com.diniig.samples.gof.creational.CoffeOrderFormBuilder;
 import com.diniig.samples.gof.creational.CreationalPattern;
 import com.diniig.samples.gof.creational.Device;
@@ -169,7 +178,11 @@ public class GofTest {
         MyObserver ob2 = new MyObserverImpl();
         MyObserver ob3 = new MyObserverImpl();
 
-        Processor pr = new ProcessorImpl();
+        ProcessorImpl pr = new ProcessorImpl();
+        pr.subscribe(ob1);
+        pr.subscribe(ob2);
+        pr.subscribe(ob3);
+        pr.update(1);
 
 
         State state1 = new SuspendedState();
